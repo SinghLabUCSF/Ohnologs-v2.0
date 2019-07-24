@@ -1,0 +1,40 @@
+# Don't track content of these folders
+_Analysis_/
+5_Run_synteny_No-sarco-neo/
+6_CombineAllVertebrates_No-sarco-neo-old/
+6_CombineAllVertebrates-with-sarco-neo-old/
+7_FilterOhnologs_No-sarco-neo-old/
+7_FilterOhnologs-with-sarco-neo-old/
+8_GenerateOhnoFamilies_No-sarco-neo-old/
+8_GenerateOhnoFamilies-with-sarco-neo-old/
+10_Prepare_data_for_server/
+11_Lineage_specific_ohnologs/
+OhnologsForNfur
+
+# File types to ignore #
+##################
+*.txt
+*.pdf
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+# Packages #
+#################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
