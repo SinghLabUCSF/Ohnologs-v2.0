@@ -2,7 +2,7 @@
 
 Use biomaRt to download protein coding genes for each of the genome to be analyzed.
 
-* Script: [1_get_biomaRt_Annotation_files.R](./1_get_biomaRt_Annotation_files.R)
+* Script: [1_get_biomaRt_GeneAttribute_files](./1_get_biomaRt_GeneAttribute_files)
 
 * [species.txt](./species.txt) has the name of species list.
 
