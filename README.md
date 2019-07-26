@@ -1,3 +1,4 @@
+
 # OHNOLOGS v2.0
 
 ##### OHNOLOGS v2.0 is a comprehensive repository for ohnologs retained from Whole Genome Duplications (WGDs) in the vertebrate genomes.    
@@ -33,4 +34,7 @@ Combinig ohnologs from all vertebrates by taking a phylogenetically biased avera
 * [8_GenerateOhnoFamilies](8_GenerateOhnoFamilies)
 Generating ohnolog families for each criteria using ohnolog pairs.
 
-
+> If you use the data or code in the repository, please cite:
+> * Singh P.P. and Isambert H. (2019) **OHNOLOGS v2: A comprehensive resource for the genes retained from whole genome duplication in vertebrates**. Submitted.
+> 
+> * Singh P.P., Arora J. and Isambert H. (2015) **Identification of ohnolog genes originating from whole genome duplication in early vertebrates, based on synteny comparison across multiple genomes.** [PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004394).

@@ -8,7 +8,7 @@ Use biomaRt to download protein coding genes for each of the genome to be analyz
 
 * Ensembl version used is v84
 
-* Similarly Gene Ontology attributes have been downloaded using [2_get_biomaRt_GO_files.R](./2_get_biomaRt_GO_files.R) (see below for more details).
+* Similarly Gene Ontology attributes have been downloaded using `2_get_biomaRt_GO_files.R` (see below for more details).
 
 #### Prepare a sorted gene list file for the OHNOLOGS runs.
 

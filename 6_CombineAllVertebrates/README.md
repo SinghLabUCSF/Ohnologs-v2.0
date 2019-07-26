@@ -11,4 +11,4 @@
    
 4. `3_filterWithinWindows.pl` filters the genes that may be combined due to their ortholog in other vertebrates but that lie within the smallest window of 100 genes.
 
-5. `4_addMissingInfo.pl` adds the duplication time and gene names if it's missing for some genes. 
+5. `4_addMissingInfo.pl` adds the duplication time and gene names if it's missing for some genes. 	

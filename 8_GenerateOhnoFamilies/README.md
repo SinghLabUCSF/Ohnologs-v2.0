@@ -1,10 +1,10 @@
-## Generate Ohnolog families using depth first search
+## Generate ohnolog families using depth first search
 
 These scripts generate ohnolog families by combining pairs for all the organisms. 
 
-* `0_create_dirs.pl`: Create directpries for all organisms.
+* `0_create_dirs.pl`: Create directories for all organisms.
 
-* `1_DepthFirstSearchOhnolgFamilies_cl.pl`: Generate ohnolog families using depth first search. It will use all the pairs and get all ohnologs connected to these pairs until no new ohnolog memebers are found. 
+* `1_DepthFirstSearchOhnolgFamilies_cl.pl`: Generate ohnolog families using depth first search. It will use all the pairs and get all ohnologs connected to these pairs until no new ohnolog members are found. 
 
 * `1b_filterSize1families_cl.pl`: Filter our families if they are all merged together. This can happen if they lie within the smallest window after combining all vertebrates.
 
@@ -16,7 +16,7 @@ These scripts generate ohnolog families by combining pairs for all the organisms
 
 * `4_getGeneSymols.pl`: Convert Ensembl Ids to symbols.
 
-* `run_all.pl`: Run the piepeline for all or selected organisms.
+* `run_all.pl`: Run the pipeline for all or selected organisms.
 
-> Note that we remove SSDs age information from the OHNOLOGS sever for simplicity. On the server all SSDs within an ohnon family are separated by a comma regardless of age.
+> Note that we remove SSDs age information from the OHNOLOGS sever for simplicity. On the server all SSDs within an ohnolog family are separated by a comma regardless of age.
 
