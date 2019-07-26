@@ -1,8 +1,8 @@
-## Download gene attributes' lists from Ensembl BioMart
+## Download genes and attribute lists from Ensembl 
 
 Use biomaRt to download protein coding genes for each of the genome to be analyzed.
 
-* Script: [1_get_biomaRt_GeneAttribute_files](./1_get_biomaRt_GeneAttribute_files)
+* Script: `1_get_biomaRt_GeneAttribute_files`.
 
 * [species.txt](./species.txt) has the name of species list.
 
@@ -26,7 +26,7 @@ Use biomaRt to download protein coding genes for each of the genome to be analyz
   * snRNA
   * snoRNA
   
-* Use [3_processAllPCfile_with-scaffolds.pl](3_processAllPCfile_with-scaffolds.pl) to prepare lists of all genes for OHNOLOGS.
+* Use `3_processAllPCfile_with-scaffolds.pl` to prepare lists of all genes for OHNOLOGS.
 
 * Amphioxus is processed separately. See [README](../4_All_PC_Gene_Seqs/1a_Amphioxus_gene_file/README.md).
     
