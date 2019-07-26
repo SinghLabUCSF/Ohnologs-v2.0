@@ -2,4 +2,35 @@
 
 ##### OHNOLOGS v2.0 is a comprehensive repository for ohnologs retained from Whole Genome Duplications (WGDs) in the vertebrate genomes.    
 
-This repository contains all the codes and data used to construct [OHNOLOGS v2.0](http://ohnologs.curie.fr/).    
+> This repository contains all the codes and data used to construct [OHNOLOGS v2.0](http://ohnologs.curie.fr/) server.  
+
+More information can be found in the directories  below:
+
+* [0_Organisms_In_Ohnolog2.0](0_Organisms_In_Ohnolog2.0)
+   Organisms and the outgroups included in OHNOLOGS v2.0.
+   
+* [1_All_Genes](1_All_Genes)
+  Details on all the genes, Gene Ontology terms, chromosomal locations etc.
+  
+* [2_Paralogs](2_Paralogs)
+  Details on candidates paralogs, their duplication timing, and consus duplication timing from Ensembl.
+  
+* [3_Orthologs](3_Orthologs)
+  Getting and preparing the orthologs from Ensembl among vertebrates and between vertebrates and outgroups for synteny analysis.
+  
+* [4_All_PC_Gene_Seqs](4_All_PC_Gene_Seqs)
+  Including Amphioxus as an outgroup which is not covered by Ensembl.
+  
+* [5_Run_synteny](5_Run_synteny)
+ Run the synteny analysis to identify all ohnologs and their confidence score (q-score).
+ 
+* [6_CombineAllVertebrates](6_CombineAllVertebrates)
+Combinig ohnologs from all vertebrates by taking a phylogenetically biased averaging of q-scores.
+
+* [7_FilterOhnologs](7_FilterOhnologs)
+  Filter candidate ohnologs based on the three predefined (strict, Intermediate and relaxed) q-score criteria.
+  
+* [8_GenerateOhnoFamilies](8_GenerateOhnoFamilies)
+Generating ohnolog families for each criteria using ohnolog pairs.
+
+
