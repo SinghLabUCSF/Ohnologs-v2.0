@@ -28,5 +28,5 @@ Use biomaRt to download protein coding genes for each of the genome to be analyz
   
 * Use `3_processAllPCfile_with-scaffolds.pl` to prepare lists of all genes for OHNOLOGS.
 
-* Amphioxus is processed separately. See [README](../4_All_PC_Gene_Seqs/1a_Amphioxus_gene_file/README.md).
+* Amphioxus is processed separately. See [README](../4_All_PC_Gene_Seqs/README.md).
     
