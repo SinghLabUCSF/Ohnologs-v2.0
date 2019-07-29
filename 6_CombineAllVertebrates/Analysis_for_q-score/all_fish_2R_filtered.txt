@@ -1,0 +1,6 @@
+2R all fish	species	from all fish	Altschul inversion all fish det=10-1
+Spotted gar	loculatus	0.680399	0.790695
+Stickleback	gaculeatus	0.251954	0.308746
+Medaka	olatipes	0.293714	0.347094
+Tetraodon	tnigroviridis	0.168113	0.308746
+Zebrafish	drerio	0.514696	0.579088

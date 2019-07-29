@@ -1,0 +1,5 @@
+2R sauropsid	species	from sauropsid	Altschul inversion sauropsida det=10-1
+Anole lizard	acarolinensis	0.57165	0.770026
+Chicken	ggallus	0.208823	0.281289
+Turkey	mgallopavo	0.208823	0.281289
+Zebra Finch	tguttata	0.333856	0.449713

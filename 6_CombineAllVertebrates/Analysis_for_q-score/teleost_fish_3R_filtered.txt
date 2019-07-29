@@ -1,0 +1,5 @@
+3R teleost fish	species	from teleost fish	Altschul inversion teleost 3R
+Stickleback	gaculeatus		0.497557
+Medaka	olatipes		0.552949
+Tetraodon	tnigroviridis		0.497557
+Zebrafish	drerio		0.861523

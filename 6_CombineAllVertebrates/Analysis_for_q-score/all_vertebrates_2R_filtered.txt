@@ -1,0 +1,28 @@
+2R all vertebrates 28	species	from all	Altschul inversion All 27 vertebrates det=2.10-14	With lambda=+0.1 det=10-9
+Human	hsapiens	0.010276	0.0102515	0.0173998
+Anole lizard	acarolinensis	0.57165	0.570292	0.578181
+Cat	fcatus	0.0613768	0.061231	0.0698233
+Chicken	ggallus	0.208823	0.208327	0.234207
+Chimpanzee	ptroglodytes	0.010276	0.0102515	0.0173998
+Cow	btaurus	0.042379	0.0422783	0.0514975
+Dog	cfamiliaris	0.0613768	0.061231	0.0698233
+Gorilla	ggorilla	0.0129923	0.0129614	0.018556
+Horse	ecaballus	0.0787132	0.0785262	0.0841735
+Macaque	mmulatta	0.0154516	0.0154148	0.0224754
+Marmoset	cjacchus	0.0579402	0.0578025	0.0570663
+Mouse	mmusculus	0.0588736	0.0587337	0.0671525
+Olive baboon	panubis	0.0175612	0.0175195	0.0232318
+Opossum	mdomestica	0.338773	0.337969	0.336146
+Orangutan	pabelii	0.0203927	0.0203442	0.0232689
+Pig	sscrofa	0.0633465	0.063196	0.070123
+Rabbit	ocuniculus	0.101183	0.100943	0.103746
+Rat	rnorvegicus	0.0568671	0.056732	0.0664283
+Sheep	oaries	0.0383498	0.0382587	0.0493225
+Turkey	mgallopavo	0.208823	0.208327	0.234207
+Vervet-AGM	csabaeus	0.0190102	0.0189651	0.0239396
+Zebra Finch	tguttata	0.333856	0.333063	0.342038
+Spotted gar	loculatus	0.680399	0.724875	0.688695
+Stickleback	gaculeatus	0.251954	0.283045	0.270937
+Medaka	olatipes	0.293714	0.318201	0.31
+Tetraodon	tnigroviridis	0.168113	0.283045	0.194587
+Zebrafish	drerio	0.514696	0.530883	0.525997

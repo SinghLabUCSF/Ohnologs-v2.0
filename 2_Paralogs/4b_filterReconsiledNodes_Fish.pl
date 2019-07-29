@@ -1,6 +1,7 @@
-# Filter the fish paralogs for WGD
+# Filter the fish paralogs for WGD both 2R and 3R
 # The nodes selected for 2R are: Vertebrata, Euteleostomi, Chordata, Sarcopterygii (for tetrapods), Neopterygii (for fish)
 # Nodes for 3R WGD: FishWGD, Clupeocephala, Acanthomorphata
+
 use strict;
 use warnings;
 

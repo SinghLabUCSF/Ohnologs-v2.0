@@ -1,6 +1,7 @@
 ##  Orthologs with Amphioxus
 
-1. Downloaded amphioxus data from: http://genome.jgi.doe.gov/Brafl1/Brafl1.download.ftp.html
+1. Downloaded amphioxus data from: http://genome.jgi.doe.gov/Brafl1/Brafl1.download.ftp.html   
+   From Putnam et al. 2008, Nature.
 
 2. Downloaded all protein fasta files from Ensembl v84.
 

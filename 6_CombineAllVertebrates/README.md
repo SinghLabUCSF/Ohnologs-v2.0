@@ -1,7 +1,6 @@
+## Combine all vertebrates 
 
-### Combine all vertebrates 
-
-> Here, we combine ohnologs from all vertebrates by taking a phylogenetically biased q-score average. 
+> Here, we combine ohnologs from all vertebrates by taking a **phylogenetically biased q-score** average. 
 
 1. Create directories for each organism `0_create_dirs.pl` 
 

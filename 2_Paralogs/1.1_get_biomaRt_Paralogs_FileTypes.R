@@ -1,5 +1,9 @@
-# Set wd to current file location
-setwd("/Volumes/Mybook_2/Ohnologs/Synteny_All_2016_03_09/2_Paralogs")
+# Get paralogs for all the species in the database using BioMart
+# This is for each file type separately, for larger file sizes.
+
+# Set wd to the current directory
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 # read organism names
 org = readLines("species_not-run.txt")
 versions = readLines("ensembl_versions_80-86.txt")

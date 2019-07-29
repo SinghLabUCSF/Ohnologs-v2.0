@@ -1,6 +1,7 @@
-# Filter reconciled nodes for 2R WGD organisms -> tetrapods excluding fish
+# Filter reconciled nodes for 2R WGD organisms for tetrapods excluding fish.
 # The nodes selected for 2R are: Vertebrata, Euteleostomi, Chordata, Sarcopterygii (for tetrapods), Neopterygii (for fish)
 # Nodes for 3R WGD: FishWGD, Clupeocephala, Acanthomorphata
+
 use strict;
 use warnings;
 
@@ -33,7 +34,7 @@ foreach (<4_filter_multi_copy_paralogs/*.txt>){
 		}
 };
 
-# Subroutein --- just to simplify the reading --------------------------------------------
+# Subroutein
 sub Process {
 
 	my $organism = shift;

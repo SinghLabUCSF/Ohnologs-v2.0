@@ -1,3 +1,8 @@
+# Get a reconciled node from all 7 versions based on majority rule.
+# If the consensus points to multiple node, I take prefer versions.
+# FishWGD, is a consensus duplication node corresponding to teh base of teleost fish.
+#
+
 use strict;
 use warnings;
 
@@ -18,7 +23,7 @@ foreach (<2_Combined_nodes/*.txt>){
 }
 
 
-# Subroutein --- just to simplify the reading --------------------------------------------
+# Subroutein 
 sub Process {
 
 	my $organism = shift;
