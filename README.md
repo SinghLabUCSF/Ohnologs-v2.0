@@ -14,7 +14,7 @@ More information can be found in the directories  below:
   Details on all the genes, Gene Ontology terms, chromosomal locations etc.
   
 * [2_Paralogs](2_Paralogs)
-  Details on candidates paralogs, their duplication timing, and consus duplication timing from Ensembl.
+  Details on candidate paralogs, their duplication timing, and consensus duplication timing from Ensembl.
   
 * [3_Orthologs](3_Orthologs)
   Getting and preparing the orthologs from Ensembl among vertebrates and between vertebrates and outgroups for synteny analysis.
@@ -26,10 +26,10 @@ More information can be found in the directories  below:
  Run the synteny analysis to identify all ohnologs and their confidence score (q-score).
  
 * [6_CombineAllVertebrates](6_CombineAllVertebrates)
-Combinig ohnologs from all vertebrates by taking a phylogenetically biased averaging of q-scores.
+Combining ohnologs from all vertebrates by taking a phylogenetically biased averaging of q-scores.
 
 * [7_FilterOhnologs](7_FilterOhnologs)
-  Filter candidate ohnologs based on the three predefined (strict, Intermediate and relaxed) q-score criteria.
+  Filter candidate ohnologs based on the three predefined (strict, intermediate and relaxed) q-score criteria.
   
 * [8_GenerateOhnoFamilies](8_GenerateOhnoFamilies)
 Generating ohnolog families for each criteria using ohnolog pairs.
