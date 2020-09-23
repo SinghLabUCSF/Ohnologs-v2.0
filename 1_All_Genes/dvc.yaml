@@ -1,0 +1,8 @@
+stages:
+  1_get_biomaRt_GeneAttribute_files:
+    cmd: Rscript 1_get_biomaRt_GeneAttribute_files.R
+    deps:
+    - 1_get_biomaRt_GeneAttribute_files.R
+    - species.txt
+    outs:
+    - 1_BioMart_gene_attributes/

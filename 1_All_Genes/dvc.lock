@@ -1,0 +1,10 @@
+1_get_biomaRt_GeneAttribute_files:
+  cmd: Rscript 1_get_biomaRt_GeneAttribute_files.R
+  deps:
+  - path: 1_get_biomaRt_GeneAttribute_files.R
+    md5: 67e13b7787823e963f6250a4edd627c6
+  - path: species.txt
+    md5: c1654a723a86977ec4cdcdc108fbd949
+  outs:
+  - path: 1_BioMart_gene_attributes/
+    md5: 5576b705b6c6ffb68ab997c56d160474.dir
