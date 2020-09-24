@@ -6,3 +6,10 @@ stages:
     - species.txt
     outs:
     - 1_BioMart_gene_attributes/
+  2_get_biomaRt_GO_files:
+    cmd: Rscript 2_get_biomaRt_GO_files.R
+    deps:
+    - 2_get_biomaRt_GO_files.R
+    - species.txt
+    outs:
+    - 2_BioMart_GO_attributes

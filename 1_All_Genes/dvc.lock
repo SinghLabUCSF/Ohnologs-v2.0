@@ -8,3 +8,13 @@
   outs:
   - path: 1_BioMart_gene_attributes/
     md5: 5576b705b6c6ffb68ab997c56d160474.dir
+2_get_biomaRt_GO_files:
+  cmd: Rscript 2_get_biomaRt_GO_files.R
+  deps:
+  - path: 2_get_biomaRt_GO_files.R
+    md5: 1419a823c135bcbc0bc9535af64abf4d
+  - path: species.txt
+    md5: c1654a723a86977ec4cdcdc108fbd949
+  outs:
+  - path: 2_BioMart_GO_attributes
+    md5: 442c364e3e5c97b2e0fa0f5c3e0cf983.dir
