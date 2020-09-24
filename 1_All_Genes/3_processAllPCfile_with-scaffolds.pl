@@ -52,14 +52,22 @@ foreach (<1_BioMart_gene_attributes\/*.txt>){
 	my $infile = $_;
 	#print "$_\n";
 	
-	$_=~/\/(.+)_gene_ensembl_biomaRt_v84_20160703\.txt/g;
+	$_=~/\/(.+)_gene_ensembl_biomaRt_v84\.txt/g;
 	my $organism = $1;
 		
 #	if ($organism eq 'cjacchus'){ # test for one organism
 	
 	print "$organism\n";
 	
-	my $outfile = "3_Prepare_final_gene_files_all-scaffolds\/AllGenes_".$organism."_Ens84.txt";
+	# output directory
+	my $directory = "3_Prepare_final_gene_files_all-scaffolds";
+
+	# created if not exists
+	unless(-e $directory or mkdir $directory) {
+        die "Unable to create $directory\n";
+    }
+
+	my $outfile = $directory."\/AllGenes_".$organism."_Ens84.txt";
 	
 	# Open the organism file downloaded from bio_mart
 	open FH, $infile or die $!;
@@ -97,7 +105,7 @@ foreach (<1_BioMart_gene_attributes\/*.txt>){
 	
 	
 	# Open the GO file for this organism
-	open GO, "2_BioMart_GO_attributes\/$organism\_gene_ensembl84_GO_20160703.txt" or die $!;
+	open GO, "2_BioMart_GO_attributes\/$organism\_gene_ensembl_GO_v84.txt" or die $!;
 	my @gofile = <GO>;
 	close (GO);
 	my $goheader = shift @file;

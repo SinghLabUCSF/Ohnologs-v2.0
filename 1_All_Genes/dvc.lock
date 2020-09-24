@@ -18,3 +18,15 @@
   outs:
   - path: 2_BioMart_GO_attributes
     md5: 442c364e3e5c97b2e0fa0f5c3e0cf983.dir
+3_processAllPCfile_with-scaffolds:
+  cmd: perl 3_processAllPCfile_with-scaffolds.pl
+  deps:
+  - path: 1_BioMart_gene_attributes
+    md5: 5576b705b6c6ffb68ab997c56d160474.dir
+  - path: 2_BioMart_GO_attributes
+    md5: 442c364e3e5c97b2e0fa0f5c3e0cf983.dir
+  - path: 3_processAllPCfile_with-scaffolds.pl
+    md5: 77cc9d304e80f0a473ea24207c23e005
+  outs:
+  - path: 3_Prepare_final_gene_files_all-scaffolds
+    md5: 1c0636fd1b86adc53f2df8286473b6bb.dir

@@ -13,3 +13,11 @@ stages:
     - species.txt
     outs:
     - 2_BioMart_GO_attributes
+  3_processAllPCfile_with-scaffolds:
+    cmd: perl 3_processAllPCfile_with-scaffolds.pl
+    deps:
+    - 1_BioMart_gene_attributes
+    - 2_BioMart_GO_attributes
+    - 3_processAllPCfile_with-scaffolds.pl
+    outs:
+    - 3_Prepare_final_gene_files_all-scaffolds
