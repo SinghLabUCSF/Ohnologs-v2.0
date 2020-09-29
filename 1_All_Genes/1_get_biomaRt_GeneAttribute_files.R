@@ -3,7 +3,7 @@ org = readLines("species.txt")
 #org = readLines("speciestest.txt")
 
 # define a filename tag
-tag = "_biomaRt_v84.txt"
+tag = "_biomaRt_v101.txt"
 
 # output dir
 output = "1_BioMart_gene_attributes"
@@ -49,8 +49,8 @@ for (i in 1:length(org)){
 	}
 	# else use regular biomart and names
 	else {
-		#ensembl = useMart("ensembl", dataset=org[i]) # This is for the latest version of Ensembl which is v84
-		ensembl = useMart(host="mar2016.archive.ensembl.org",biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v84 here)
+		ensembl = useMart("ensembl", dataset=org[i]) # This is for the latest version of Ensembl which is v101
+		#ensembl = useMart(host="mar2016.archive.ensembl.org",biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v84 here)
 	}
 	
 	# generate file name

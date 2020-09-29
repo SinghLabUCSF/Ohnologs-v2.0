@@ -2,31 +2,31 @@
   cmd: Rscript 1_get_biomaRt_GeneAttribute_files.R
   deps:
   - path: 1_get_biomaRt_GeneAttribute_files.R
-    md5: 67e13b7787823e963f6250a4edd627c6
+    md5: 1831f4a4a674f1a1c6b976990fcd42fd
   - path: species.txt
-    md5: c1654a723a86977ec4cdcdc108fbd949
+    md5: abb45641dc620729ce2e11ab39001fb4
   outs:
   - path: 1_BioMart_gene_attributes/
-    md5: 5576b705b6c6ffb68ab997c56d160474.dir
+    md5: aac5dd64be2e28b2d3164527e8f1a98b.dir
 2_get_biomaRt_GO_files:
   cmd: Rscript 2_get_biomaRt_GO_files.R
   deps:
   - path: 2_get_biomaRt_GO_files.R
-    md5: 1419a823c135bcbc0bc9535af64abf4d
+    md5: 01323996631ffeb43c2cad742a3afdbf
   - path: species.txt
-    md5: c1654a723a86977ec4cdcdc108fbd949
+    md5: abb45641dc620729ce2e11ab39001fb4
   outs:
   - path: 2_BioMart_GO_attributes
-    md5: 442c364e3e5c97b2e0fa0f5c3e0cf983.dir
+    md5: 0005c22a6c8cf97a28a333ecddabc683.dir
 3_processAllPCfile_with-scaffolds:
   cmd: perl 3_processAllPCfile_with-scaffolds.pl
   deps:
   - path: 1_BioMart_gene_attributes
-    md5: 5576b705b6c6ffb68ab997c56d160474.dir
+    md5: aac5dd64be2e28b2d3164527e8f1a98b.dir
   - path: 2_BioMart_GO_attributes
-    md5: 442c364e3e5c97b2e0fa0f5c3e0cf983.dir
+    md5: 0005c22a6c8cf97a28a333ecddabc683.dir
   - path: 3_processAllPCfile_with-scaffolds.pl
-    md5: 77cc9d304e80f0a473ea24207c23e005
+    md5: ea2788e5f39ce219a6d85bc5145b0257
   outs:
   - path: 3_Prepare_final_gene_files_all-scaffolds
-    md5: 1c0636fd1b86adc53f2df8286473b6bb.dir
+    md5: ac561ca9278b621d3785dc97d48f6350.dir

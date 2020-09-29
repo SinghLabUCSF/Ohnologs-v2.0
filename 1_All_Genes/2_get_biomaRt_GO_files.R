@@ -3,7 +3,7 @@ org = readLines("species.txt")
 #org = readLines("speciestest.txt")
 
 # define a filename tag
-tag = "_GO_v84.txt"
+tag = "_GO_v101.txt"
 
 # output dir
 output = "2_BioMart_GO_attributes"
@@ -50,17 +50,20 @@ for (i in 1:length(org)){
 	}
 	# else use regular biomart and names
 	else {
-		#ensembl = useMart("ensembl", dataset=org[i]) # This is for the latest version of Ensembl which is v84
+		ensembl = useMart("ensembl", dataset=org[i]) # This is for the latest version of Ensembl which is v101
 		#ensembl = useMart(host="sep2015.archive.ensembl.org",biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v82 here)
-		ensembl = useMart(host="mar2016.archive.ensembl.org",biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v84 here)
+		#ensembl = useMart(host="mar2016.archive.ensembl.org",biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v84 here)
 	
 	}
 	
 	# generate file name
 	filename = paste(output, "/", org[i], tag, sep = "")
 	
+	# Getting first the gene ids to pass as filters in the main query. This avoids the 5 minutes timeout for big queries
+	all_gene_ids <- getBM(attributes = c("ensembl_gene_id"), mart = ensembl)
+
 	# var = getBM(attributes = attr, filters = 'biotype', values = 'protein_coding', mart = ensembl) # Earlier I was filtering PC genes, now I am not
-	var = getBM(attributes = attr, mart = ensembl)
+	var = getBM(attributes = attr, filters = "ensembl_gene_id", values = all_gene_ids, mart = ensembl)
   
 	write.table(var, file = filename, sep ="\t", quote=F, row.names = F)
 	

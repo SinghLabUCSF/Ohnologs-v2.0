@@ -52,7 +52,7 @@ foreach (<1_BioMart_gene_attributes\/*.txt>){
 	my $infile = $_;
 	#print "$_\n";
 	
-	$_=~/\/(.+)_gene_ensembl_biomaRt_v84\.txt/g;
+	$_=~/\/(.+)_gene_ensembl_biomaRt_v101\.txt/g;
 	my $organism = $1;
 		
 #	if ($organism eq 'cjacchus'){ # test for one organism
@@ -105,7 +105,7 @@ foreach (<1_BioMart_gene_attributes\/*.txt>){
 	
 	
 	# Open the GO file for this organism
-	open GO, "2_BioMart_GO_attributes\/$organism\_gene_ensembl_GO_v84.txt" or die $!;
+	open GO, "2_BioMart_GO_attributes\/$organism\_gene_ensembl_GO_v101.txt" or die $!;
 	my @gofile = <GO>;
 	close (GO);
 	my $goheader = shift @file;
