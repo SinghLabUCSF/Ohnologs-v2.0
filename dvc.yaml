@@ -1,0 +1,31 @@
+stages:
+  1_All_Genes-1_get_biomaRt_GeneAttribute_files:
+    cmd: Rscript 1_All_Genes/1_get_biomaRt_GeneAttribute_files.R
+    deps:
+    - 1_All_Genes/1_get_biomaRt_GeneAttribute_files.R
+    - species.txt
+    outs:
+    - 1_All_Genes/1_BioMart_gene_attributes/
+  1_All_Genes-2_get_biomaRt_GO_files:
+    cmd: Rscript 1_All_Genes/2_get_biomaRt_GO_files.R
+    deps:
+    - 1_All_Genes/2_get_biomaRt_GO_files.R
+    - species.txt
+    outs:
+    - 1_All_Genes/2_BioMart_GO_attributes
+  1_All_Genes-3_processAllPCfile_with-scaffolds:
+    cmd: perl 1_All_Genes/3_processAllPCfile_with-scaffolds.pl
+    deps:
+    - 1_All_Genes/1_BioMart_gene_attributes
+    - 1_All_Genes/2_BioMart_GO_attributes
+    - 1_All_Genes/3_processAllPCfile_with-scaffolds.pl
+    outs:
+    - 1_All_Genes/3_Prepare_final_gene_files_all-scaffolds
+  2_Paralogs-1_get_biomaRt_Paralogs:
+    cmd: Rscript 2_Paralogs/1.1_get_biomaRt_Paralogs_FileTypes.R
+    deps:
+    - 2_Paralogs/1.1_get_biomaRt_Paralogs_FileTypes.R
+    - 2_Paralogs/ensembl_versions_95-101.txt
+    - species.txt
+    outs:
+    - 2_Paralogs/1_Paralogs_from_7_latest_versions/

@@ -1,12 +1,14 @@
 # Get paralogs for all the species in the database using BioMart
 # This is for each file type separately, for larger file sizes.
 
-# Set wd to the current directory
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+# output dir
+output = "2_Paralogs/1_Paralogs_from_7_latest_versions"
+if(!dir.exists(output))
+    dir.create(output)
 
 # read organism names
-org = readLines("species_not-run.txt")
-versions = readLines("ensembl_versions_80-86.txt")
+org = readLines("species.txt")
+versions = readLines("2_Paralogs/ensembl_versions_95-101.txt")
 
 genetypes = c("protein_coding","rRNA","snRNA", "snoRNA", "misc_RNA", "miRNA")
 #genetypes = c("protein_coding", "mirna")
@@ -37,16 +39,16 @@ library("biomaRt")
 # for all organisms
 
 for (i in 1:length(org)){ # foreach organism
-  
+  print (org[i])
   for (j in 1:length(versions)){ # foreach of the 7 versions
-  
+    print (versions[j])
     # load ensembl biomart in a variable named ensembl
   	#ensembl = useMart("ensembl", dataset=org[i]) # This is for the latest version of Ensembl - or you can get the website and use that as used below
   	ensembl = useMart(host=versions[j],biomart="ENSEMBL_MART_ENSEMBL", dataset=org[i]) # This is for the archived version (e.g. Ensembl v82 here)
   	
   	# generate file name
   	filename = paste(org[i], versions[j], sep = "_")
-  	filename = paste("1_Paralogs_from_7_latest_versions", filename, sep="/")
+  	filename = paste(output, filename, sep="/")
   	
     
     # Get the attributes that I want to get for this organism
@@ -56,20 +58,24 @@ for (i in 1:length(org)){ # foreach organism
     # generate the attribute array for the organism
     attr = c("ensembl_gene_id", 
              paste(orgstring[1], "_paralog_ensembl_gene", sep = ""),
-             paste(orgstring[1], "_paralog_subtype", sep = ""),
-             paste(orgstring[1], "_paralog_paralogy_confidence", sep = ""))
+             paste(orgstring[1], "_paralog_subtype", sep = ""))
+#             paste(orgstring[1], "_paralog_paralogy_confidence", sep = "")) # This attribute is not present in the latest version of Ensembl v101
     
-  	var = getBM(attributes = attr, filters = 'biotype', values = 'protein_coding', mart = ensembl) 
+  	# Getting first the gene ids to pass as filters in the main query. This avoids the 5 minutes timeout for big queries
+    all_gene_ids <- getBM(attributes = c("ensembl_gene_id"), mart = ensembl)
   	#var = getBM(attributes = attr, mart = ensembl) # No filter
 
     finalfile = paste(org[i], versions[j], sep = "_")
     finalfile = gsub(".org", ".txt", finalfile)
-    finalfile = paste("1_Paralogs_from_7_latest_versions", finalfile, sep="/")
+    finalfile = paste(output, finalfile, sep="/")
     print (finalfile)
     
     for (k in 1:length(genetypes)){ # foreach gene type
       
-      var = getBM(attributes = attr, filters = 'biotype', values = genetypes[k], mart = ensembl)
+      var = getBM(attributes = attr, 
+            filters = c("ensembl_gene_id", "biotype"), 
+            values = list(all_gene_ids$ensembl_gene_id, rep(genetypes[k], length(all_gene_ids$ensembl_gene_id))), 
+            mart = ensembl) 
       
       # generate file name
       localfile = paste(org[i], versions[j], genetypes[k], sep = "_")
@@ -83,8 +89,7 @@ for (i in 1:length(org)){ # foreach organism
       }
      rm("var")
     }
-    rm("ensembl", "filename", "orgstring", "attr", "finalfile") # remove some variables for the next run
-    print (versions[j])
+    rm("ensembl", "filename", "orgstring", "attr", "finalfile", "all_gene_ids") # remove some variables for the next run
+    print("DONE")  
   }	
-  print (org[i])
 }

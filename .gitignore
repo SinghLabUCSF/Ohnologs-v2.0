@@ -13,7 +13,6 @@ OhnologsForNfur
 
 # File types to ignore #
 ##################
-*.txt
 *.pdf
 
 
@@ -38,3 +37,11 @@ OhnologsForNfur
 *.tar
 *.zip
 
+*.Rhistory
+
+# DVC-tracked folders #
+#################
+1_All_Genes/1_BioMart_gene_attributes
+1_All_Genes/2_BioMart_GO_attributes
+1_All_Genes/3_Prepare_final_gene_files_all-scaffolds
+2_Paralogs/1_Paralogs_from_7_latest_versions

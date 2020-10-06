@@ -1,0 +1,7 @@
+aug2020.archive.ensembl.org
+apr2020.archive.ensembl.org
+jan2020.archive.ensembl.org
+sep2019.archive.ensembl.org
+jul2019.archive.ensembl.org
+apr2019.archive.ensembl.org
+jan2019.archive.ensembl.org
